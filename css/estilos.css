@@ -1,0 +1,185 @@
+/* Regras CSS (Sintaxe)
+seletor { propriedade: valor; } */
+
+/* A regra abaixo para o seletor UNIVERSAL (* todas as tags)
+aplica uma mudança ao comportamento padrão do Box Model.
+Isso evitará problemas relacionados a width, padding, 
+height e border dos elementos. SEMPRE USE em seus projetos. */
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imagens/oriental-tiles.png);
+}
+
+/* Regra com seletor CLASSE */
+.container {
+    background-color: rgba(255, 255, 255, 0.755);
+    width: 70%;
+    margin: auto;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: red 10px 10px 30px;
+    background: linear-gradient(to bottom, #f9fcf7 0%,#f5f9f0 100%);
+
+}
+
+h1 {
+    font-family: Impact;
+    background-color: rgba(139, 0, 0, 0.444);
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-shadow: darkred 4px 4px 5px;
+    font-weight: normal;
+}
+
+h2 {
+    color: darkred;
+    font-size: 28px;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    padding-left: 10px;
+
+    /* padding -> espaço dentro/interno
+    margin -> espaço fora/externo */
+}
+
+/* Tornando as imagens responsivas */
+img { max-width: 100%; }
+
+p {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* Regra com seletor CLASSE */
+.centralizar { text-align: center; }
+
+.sombra { text-shadow: red 1px 1px 2px; }
+
+.destaque {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+/* Seletor ID (pode ser usado
+somente em um elemento por página) */
+#exemplo {
+    color: red;
+    padding: 3px;
+    border: solid 2px;
+}
+
+
+a { text-decoration: none; }
+
+/* Seletor DESCENDENTE */
+p a {
+    background-color: blue;
+    color: white;
+}
+
+/* Estilos para os links e
+menu do site */
+
+nav a {
+    color: white;
+    background-color: darkred;
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+    transform: scale(0.9);
+    opacity: 0.6;
+}
+
+nav a:hover {
+    background-color: black;
+    transform: scale(1);
+    opacity: 1;
+}
+
+figure {
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+figcaption {
+    font-weight: bold;
+    color: darkred;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Seletor descendente */
+figure img {
+    filter: grayscale();
+    transition: 2s;
+}
+
+figure img:hover {
+    filter: none;
+}
+
+ul li {
+    font-size: 18px;
+    list-style-image: url(../imagens/item-lista.gif);
+}
+
+/* Pseudo-elemento */
+ul li::marker { content: "😜"; }
+
+/* Pseudo-classe :first-child
+Seleciona o primeiro filho de algum
+elemento. */
+ul li:first-child { 
+    color: red; 
+    font-weight: bold;
+}
+
+ul li:first-child::marker {
+    content: "👻";
+}
+
+/* Pseudo-classe :last-child
+Seleciona o último elemento */
+ul li:last-child {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+}
+
+
+/* Pseudo-classe :nth-child "enésimo" elemento */
+ul li:nth-child(4){
+    color: darkblue;
+    font-weight: bold;
+}
+
+ul li:nth-child(4)::marker { 
+    content: "🤣"; 
+}
+
+/* Grupo de seletores */
+ul li:nth-child(2), 
+ul li:nth-child(5),
+ul li:nth-child(9) {
+    font-style: italic;
+}
+
+ul li {
+    text-align: center;
+    list-style-position: inside;
+}

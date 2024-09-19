@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Responsivo</title>
+
+<style>
+/* MOBILE FIRST */
+
+/* Etapa 1: 
+Regras de uso COMUM/GERAL */
+* { box-sizing: border-box; }
+
+body { font-family: Verdana; }
+
+h1 { color: darkred; }
+
+p { font-size: 18px; }
+
+/* Etapa 2: Media Query (Consulta de Mídia)
+Regras de uso CONDICIONAL/RESPONSIVO */
+@media screen and (min-width: 600px) {
+
+    body { background-color: lightblue; }
+
+    h1 { text-align: center; }
+
+    p { font-size: 26px; }
+}
+
+
+@media screen and (min-width: 770px) {
+    .exemplo {
+        background-color: white;
+        width: 80%;
+        margin: auto;
+        padding: 8px;
+        border: solid 1px red;
+    }
+
+}
+
+@media screen and (min-width: 898px) {
+    h1 {
+        text-transform: uppercase;
+        border-left: solid 4px;
+        border-right: solid 4px;
+    }
+
+    hr {
+        width: 200px;
+        height: 20px;
+        background-color: darkblue;
+        border: none;
+    }
+
+    h2 { 
+        color: darkred;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .exemplo {
+        max-width: 900px;
+        box-shadow: black 0 0 100px;
+    }
+
+    b {
+        background-color: darkblue;
+        color: white;
+    }
+
+    body {
+        background-image: url(imagens/watercolor.png);
+    }
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="exemplo">
+        <h1>Sobre Design Responsivo (ou responsividade)</h1>
+        <hr>
+        <p>Conjunto de técnicas de desenvolvimento front-end 
+        visando a construção de sites em que o layout e a 
+        experiência geral de uso funcionem bem em
+        dispositivos com tela de tamanhos variados.</p>
+
+        <p>Existem duas abordagens:</p>
+
+        <h2>Mobile First (é o mais usado)</h2>
+        <p>Foco <b>primeiro em telas pequenas</b>.</p>
+        
+        <h2>Desktop First</h2>
+        <p>Foco <b>primeiro em telas grandes</b>.</p>
+    </div>
+
+</body>
+</html>
